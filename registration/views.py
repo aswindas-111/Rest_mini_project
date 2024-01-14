@@ -29,6 +29,7 @@ class register(APIView):
         return Response(data)   
     
 class welcome(APIView):
+    
     permission_classes=(IsAuthenticated,)
     
     def get(self,request):
@@ -36,6 +37,7 @@ class welcome(APIView):
         return Response(content)
     
 class userDetails(APIView):
+    '''FUNCTIONALITY OF GETTING USERS LIST'''
     def get_object(self,pk):
         try:
             return User.objects.get(pk=pk)
