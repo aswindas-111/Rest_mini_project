@@ -13,6 +13,7 @@ from rest_framework.filters import SearchFilter
 # Create your views here.
 
 class register(APIView):
+    '''FUNCTIONALITY OF REGISTER'''
     def post(self,request,format=None):
         serializer = UserRegister(data=request.data)
         data={}
